@@ -1,0 +1,130 @@
+nav ul{
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    list-style: none;
+    background: #f0dbdb;
+    padding: 27px;
+}
+
+nav ul li a{
+    padding: 25px;
+    background: #6c0c0c;
+    color: #fff;
+    text-decoration: none;
+}
+h1{
+    text-align: center;
+    font-size: 45px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+ 
+}
+.promo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    width: 300px;
+    height: 300px;
+    background: #f0d5d5;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.promo a{
+    text-decoration: none;
+    font-size: 20px;
+    border: 1px solid red;
+    padding: 8px;
+    background: #000;
+    color: whitesmoke;
+}
+.promo a:hover{
+    color: white;
+    background: #716161;
+}
+h2{
+    text-align: center;
+}
+.img{
+    display: none;
+}
+.promo-img{
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    display: non;
+}
+.promo-img.active{
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.flex{
+    display: flex;
+}
+
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
+    padding: 20px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* ... Votre CSS existant ... */
+
+/* Ajout de l'animation pour les promotions */
+.promo {
+    animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Style pour la légende de l'image */
+.image-caption {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .image-caption {
+    opacity: 1;
+}
